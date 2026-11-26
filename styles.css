@@ -1,0 +1,71 @@
+:root{color-scheme:light;--paper:#f7f2ea;--wine:#711f35;--ink:#252322;--rose:#c9a6aa;--line:#b9a8a0;--serif:"Bodoni 72",Didot,Georgia,serif;--sans:system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.5 var(--sans)}
+.masthead{width:min(1220px,92%);margin:auto;padding:19px 0 15px;border-bottom:1px solid var(--wine);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.masthead span:first-child{font-family:var(--serif);font-size:1.35rem}
+.masthead>span+span,.eyebrow,.issue p,figcaption{font:600 .78rem/1.4 var(--sans);letter-spacing:.15em;text-transform:uppercase}
+main{width:min(1220px,92%);margin:24px auto 40px}
+.spread{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:clamp(24px,5vw,78px)}
+.plate{position:relative;margin:0;background:#e5d1c2;overflow:hidden;align-self:stretch;min-height:420px}
+.plate img{position:absolute;width:100%;height:100%;object-fit:cover}
+.plate figcaption{position:absolute;bottom:0;left:0;padding:10px 14px;background:var(--paper);color:var(--wine)}
+.cover{min-height:600px}
+.copy{padding:24px 0}
+.issue{display:flex;align-items:center;gap:16px;color:var(--wine)}
+.issue>span{font:clamp(3.25rem,7vw,6rem)/.85 var(--serif);letter-spacing:-.06em}
+h1,h2{font-family:var(--serif);font-weight:500;margin:0;line-height:.98}
+h1{font-size:clamp(3rem,6.8vw,7rem);letter-spacing:-.05em;margin:18px 0}
+h1 em{color:var(--wine)}
+.story-title,.report h1{font-size:clamp(2.4rem,5.2vw,5.2rem)}
+.tagline{font:italic clamp(1.25rem,2.2vw,1.75rem)/1.25 var(--serif);margin:0 0 25px}
+.note{border-top:1px solid var(--line);padding-top:17px;color:var(--wine)}
+.copy p{max-width:55ch}
+button,input{font:inherit}
+button{cursor:pointer;padding:11px 19px;border:1px solid var(--wine);background:var(--wine);color:#fff;font-weight:600}
+button:hover{background:#55152a}
+button.secondary{color:var(--wine);background:transparent}
+button.secondary:hover{background:#eadbda}
+:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+h1:focus{outline:none}
+input{min-width:0;width:100%;padding:11px 12px;background:#fffaf4;border:1px solid #826e68;color:var(--ink);border-radius:0}
+label{display:block;font-weight:600;margin-bottom:5px}
+.counter,.bank-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+progress{height:7px;width:100%;display:block;accent-color:var(--wine)}
+.sentence{font:1.35rem/1.42 var(--serif)}
+.blank{display:inline-block;width:4.2em;border-bottom:1px solid var(--wine)}
+.actions,.entry{display:flex;flex-wrap:wrap;gap:8px}
+.entry input{flex:1 1 150px}
+.feedback{margin-top:8px}
+.feedback p{margin:5px 0 10px}
+.feedback strong{color:var(--wine)}
+.bank{margin-top:18px;border-top:1px solid var(--line);padding-top:8px}
+.toggle{padding:6px 0;border:0;text-decoration:underline;background:none;color:var(--wine);font-weight:500}
+.toggle:hover{background:none;color:var(--ink)}
+.words{display:flex;flex-wrap:wrap;gap:5px 10px;list-style:none;padding:0;margin:5px 0 0}
+.words li{border-bottom:1px solid var(--rose);padding:2px 4px}
+.report{max-width:780px;margin:36px auto}
+.report h2{font-size:2rem;margin:24px 0 12px}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:20px 0}
+.metrics>div,.review li{border-top:1px solid var(--line);padding:10px 0}
+.metrics strong{display:block;font:2.25rem var(--serif);color:var(--wine)}
+.breakdown{list-style:none;padding:0;display:grid;gap:8px}
+.breakdown li{display:grid;grid-template-columns:minmax(0,1fr) 28% auto;gap:12px;align-items:center}
+.review{padding-inline-start:24px;overflow-wrap:anywhere}
+.review p{margin:5px 0}
+[hidden]{display:none!important}
+@media(max-width:700px){
+  .spread{grid-template-columns:1fr;gap:8px}
+  .plate,.cover{min-height:0;height:clamp(168px,47vw,290px)}
+  .plate img{object-position:center}
+  .cover{height:clamp(216px,62vw,360px)}
+  .copy{padding:6px 0 14px}
+  main{margin-top:12px}
+  .masthead{padding:10px 0}
+  .masthead span:first-child{font-size:1.06rem}
+  .masthead>span+span{font-size:.68rem;letter-spacing:.08em}
+  .story-title{margin:10px 0}
+  .sentence{margin:9px 0;font-size:1.2rem}
+  .counter p{margin:4px 0}
+  .bank{margin-top:11px}
+}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
